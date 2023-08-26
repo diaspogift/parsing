@@ -1,0 +1,66 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 725906b084caaf8dcbaf7c5def5d49432d18cc6504578532fa3475260b891fd4
+
+name:           part003-improving-the-parse-library
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/diaspogift/part003-improving-the-parse-library#readme>
+homepage:       https://github.com/diaspogift/part003-improving-the-parse-library#readme
+bug-reports:    https://github.com/diaspogift/part003-improving-the-parse-library/issues
+author:         Fotio Manfo Felicien
+maintainer:     felicien.fotiomanfo@gmail.com
+copyright:      open source
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    CHANGELOG.md
+
+source-repository head
+  type: git
+  location: https://github.com/diaspogift/part003-improving-the-parse-library
+
+library
+  exposed-modules:
+      Core
+      CoreWithPosition
+      InputState
+      Lib
+  other-modules:
+      Paths_part003_improving_the_parse_library
+  hs-source-dirs:
+      src
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
+  build-depends:
+      base >=4.7 && <5
+  default-language: Haskell2010
+
+executable part003-improving-the-parse-library-exe
+  main-is: Main.hs
+  other-modules:
+      Paths_part003_improving_the_parse_library
+  hs-source-dirs:
+      app
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , part003-improving-the-parse-library
+  default-language: Haskell2010
+
+test-suite part003-improving-the-parse-library-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_part003_improving_the_parse_library
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , part003-improving-the-parse-library
+  default-language: Haskell2010
